@@ -6,7 +6,7 @@
 //  Copyright © 2020 Олег Мишкин. All rights reserved.
 //
 
-extension Array {
+public extension Array {
     func lastIndex() -> Int { return self.count - 1 }
     func lastIndex(offsetBy: Int) -> Int { return self.count - offsetBy - 1 }
 }
