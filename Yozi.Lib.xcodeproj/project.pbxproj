@@ -10,6 +10,7 @@
 		9B298F4223D4633500D46D62 /* Yozi_Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B298F3823D4633500D46D62 /* Yozi_Lib.framework */; };
 		9B298F4723D4633500D46D62 /* Yozi_LibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B298F4623D4633500D46D62 /* Yozi_LibTests.swift */; };
 		9B298F4923D4633500D46D62 /* Yozi_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B298F3B23D4633500D46D62 /* Yozi_Lib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B298F5523D4667100D46D62 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B298F5423D4667100D46D62 /* UserDefaultsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9B298F4123D4633500D46D62 /* Yozi.LibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Yozi.LibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B298F4623D4633500D46D62 /* Yozi_LibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yozi_LibTests.swift; sourceTree = "<group>"; };
 		9B298F4823D4633500D46D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B298F5423D4667100D46D62 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9B298F3A23D4633500D46D62 /* Yozi.Lib */ = {
 			isa = PBXGroup;
 			children = (
+				9B298F5223D465FE00D46D62 /* Archiving */,
 				9B298F3B23D4633500D46D62 /* Yozi_Lib.h */,
 				9B298F3C23D4633500D46D62 /* Info.plist */,
 			);
@@ -84,6 +87,22 @@
 				9B298F4823D4633500D46D62 /* Info.plist */,
 			);
 			path = Yozi.LibTests;
+			sourceTree = "<group>";
+		};
+		9B298F5223D465FE00D46D62 /* Archiving */ = {
+			isa = PBXGroup;
+			children = (
+				9B298F5323D4663800D46D62 /* UserDefaults */,
+			);
+			path = Archiving;
+			sourceTree = "<group>";
+		};
+		9B298F5323D4663800D46D62 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				9B298F5423D4667100D46D62 /* UserDefaultsStore.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +167,7 @@
 				TargetAttributes = {
 					9B298F3723D4633500D46D62 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					9B298F4023D4633500D46D62 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -195,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B298F5523D4667100D46D62 /* UserDefaultsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +361,7 @@
 		9B298F4D23D4633500D46D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G928DD6M2N;
@@ -348,6 +370,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Yozi.Lib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Yozi.Ent.Yozi-Lib";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +388,7 @@
 		9B298F4E23D4633500D46D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G928DD6M2N;
@@ -372,6 +397,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Yozi.Lib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +414,7 @@
 		9B298F5023D4633500D46D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G928DD6M2N;
 				INFOPLIST_FILE = Yozi.LibTests/Info.plist;
@@ -406,6 +433,7 @@
 		9B298F5123D4633500D46D62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G928DD6M2N;
 				INFOPLIST_FILE = Yozi.LibTests/Info.plist;
