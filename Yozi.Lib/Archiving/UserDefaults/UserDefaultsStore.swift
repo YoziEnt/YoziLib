@@ -6,7 +6,7 @@
 //  Copyright © 2019 Олег Мишкин. All rights reserved.
 //
 
-class UserDefaultsStore {
+public class UserDefaultsStore {
     static private let defaults = UserDefaults.standard
     
     static func save <Value : Codable> (key: String, data: Value) {
