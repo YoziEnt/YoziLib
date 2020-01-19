@@ -1,7 +1,45 @@
+Как делать изменения в своем Pod'e:
 1) Делаем изменения
 2) Коммитим их
 3) Пушим в gitHub
 4) В файле podspec изменяем номер версии
 5) В терминале вводим: git tag <Номер версии>
 6) В терминале вводим: git push origin <Номер версии>
-7) В терминале вводим: pod trunk push --allow-warnings
+7) В терминале вводим: pod trunk push  (примечание: --allow-warnings поможет если есть варнинги)
+
+
+Как создать свой Pod:
+1) Создаем новый проект, в типе проекта выбираем Framework
+2) Мутим для проекта репозиторий на GitHub
+3) В терминале вводим: pod spec create <Имя проекта>
+4) Редактируем podspec файл по образцу:
+
+Pod::Spec.new do |spec|
+
+  spec.name         = "SwiftyLib"
+  spec.version      = "0.0.1"
+  spec.summary      = "A CocoaPods library written in Swift"
+
+  spec.description  = <<-DESC
+This CocoaPods library helps you perform calculation.
+                   DESC
+
+  spec.homepage     = "https://github.com/jeantimex/SwiftyLib"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.author       = { "jeantimex" => "jean.timex@gmail.com" }
+
+  spec.ios.deployment_target = "12.1"
+  spec.swift_version = "4.2"
+
+  spec.source        = { :git => "https://github.com/jeantimex/SwiftyLib.git", :tag => "#{spec.version}" }
+  spec.source_files  = "SwiftyLib/**/*.{h,m,swift}"
+
+end
+
+5) Создаем новую сессию: pod trunk register name@example.org 'Your Name' --description='macbook pro'
+6) Подтверждаем свой емайл
+7) Пишем код, коммитим изменения в github (Не забываем все на свете делать public)
+8) В терминале вводим: pod lib lint
+9) В терминале вводим: git tag <Номер версии>
+10) В терминале вводим: git push origin <Номер версии>
+11) В терминале вводим: pod trunk push  (примечание: --allow-warnings поможет если есть 
