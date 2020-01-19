@@ -11,6 +11,7 @@
 		9B298F4723D4633500D46D62 /* Yozi_LibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B298F4623D4633500D46D62 /* Yozi_LibTests.swift */; };
 		9B298F4923D4633500D46D62 /* Yozi_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B298F3B23D4633500D46D62 /* Yozi_Lib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B298F5523D4667100D46D62 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B298F5423D4667100D46D62 /* UserDefaultsStore.swift */; };
+		9B298F8B23D473D700D46D62 /* YoziLib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9B298F8A23D473D700D46D62 /* YoziLib.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		9B298F4623D4633500D46D62 /* Yozi_LibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yozi_LibTests.swift; sourceTree = "<group>"; };
 		9B298F4823D4633500D46D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B298F5423D4667100D46D62 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		9B298F8A23D473D700D46D62 /* YoziLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YoziLib.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		9B298F2E23D4633400D46D62 = {
 			isa = PBXGroup;
 			children = (
+				9B298F8A23D473D700D46D62 /* YoziLib.podspec */,
 				9B298F3A23D4633500D46D62 /* Yozi.Lib */,
 				9B298F4523D4633500D46D62 /* Yozi.LibTests */,
 				9B298F3923D4633500D46D62 /* Products */,
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B298F8B23D473D700D46D62 /* YoziLib.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
